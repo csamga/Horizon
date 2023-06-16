@@ -1,0 +1,6 @@
+horizon/bin/
+horizon/build/
+horizon/deps/
+horizon/src/*.gch
+demo/
+.vscode/
