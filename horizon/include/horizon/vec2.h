@@ -22,7 +22,8 @@ void vec2_negate_to(vec2 v, vec2 out);
 
 f32 vec2_dot(vec2 u, vec2 v);
 f32 vec2_norm(vec2 v);
-f32 vec3_inv_norm(vec2 v);
+f32 vec2_inv_norm(vec2 v);
+
 void vec2_normalize(vec2 v);
 void vec2_normalize_to(vec2 v, vec2 out);
 

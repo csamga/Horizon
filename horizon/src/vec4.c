@@ -109,6 +109,7 @@ f32 vec4_inv_norm(vec4 v)
 
 	return fast_inv_sqrt(dot);
 }
+
 void vec4_normalize(vec4 v)
 {
 	f32 inv_norm = vec4_inv_norm(v);
@@ -118,7 +119,7 @@ void vec4_normalize(vec4 v)
 		return;
 	}
 
-	vec4_muls(v, inv_norm, v);
+	vec4_scale(v, inv_norm, v);
 }
 void vec4_normalize_to(vec4 v, vec4 out)
 {
@@ -129,7 +130,7 @@ void vec4_normalize_to(vec4 v, vec4 out)
 		return;
 	}
 
-	vec4_muls(v, inv_norm, out);
+	vec4_scale(v, inv_norm, out);
 }
 
 void vec4_cross(vec4 u, vec4 v, vec4 out)

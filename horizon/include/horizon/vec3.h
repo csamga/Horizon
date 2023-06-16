@@ -23,6 +23,7 @@ void vec3_negate_to(vec3 v, vec3 out);
 f32 vec3_dot(vec3 u, vec3 v);
 f32 vec3_norm(vec3 v);
 f32 vec3_inv_norm(vec3 v);
+
 void vec3_normalize(vec3 v);
 void vec3_normalize_to(vec3 v, vec3 out);
 

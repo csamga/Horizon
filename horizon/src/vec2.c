@@ -78,7 +78,7 @@ f32 vec2_norm(vec2 v)
 {
 	return sqrtf(vec2_dot(v, v));
 }
-f32 vec3_inv_norm(vec2 v)
+f32 vec2_inv_norm(vec2 v)
 {
 	f32 dot = vec2_dot(v, v);
 
@@ -87,6 +87,7 @@ f32 vec3_inv_norm(vec2 v)
 
 	return fast_inv_sqrt(dot);
 }
+
 void vec2_normalize(vec2 v)
 {
 	f32 inv_norm = vec2_inv_norm(v);
@@ -96,7 +97,7 @@ void vec2_normalize(vec2 v)
 		return;
 	}
 
-	vec2_muls(v, inv_norm, v);
+	vec2_scale(v, inv_norm, v);
 }
 void vec2_normalize_to(vec2 v, vec2 out)
 {
@@ -107,7 +108,7 @@ void vec2_normalize_to(vec2 v, vec2 out)
 		return;
 	}
 
-	vec2_muls(v, inv_norm, out);
+	vec2_scale(v, inv_norm, out);
 }
 
 void vec2_cross(vec2 u, vec2 v, vec3 out)

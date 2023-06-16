@@ -97,6 +97,7 @@ f32 vec3_inv_norm(vec3 v)
 
 	return fast_inv_sqrt(dot);
 }
+
 void vec3_normalize(vec3 v)
 {
 	f32 inv_norm = vec3_inv_norm(v);
@@ -106,7 +107,7 @@ void vec3_normalize(vec3 v)
 		return;
 	}
 
-	vec3_muls(v, inv_norm, v);
+	vec3_scale(v, inv_norm, v);
 }
 void vec3_normalize_to(vec3 v, vec3 out)
 {
@@ -117,7 +118,7 @@ void vec3_normalize_to(vec3 v, vec3 out)
 		return;
 	}
 
-	vec3_muls(v, inv_norm, out);
+	vec3_scale(v, inv_norm, out);
 }
 
 void vec3_cross(vec3 u, vec3 v, vec3 out)

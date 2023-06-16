@@ -23,6 +23,7 @@ void vec4_negate_to(vec4 v, vec4 out);
 f32 vec4_dot(vec4 u, vec4 v);
 f32 vec4_norm(vec4 v);
 f32 vec4_inv_norm(vec4 v);
+
 void vec4_normalize(vec4 v);
 void vec4_normalize_to(vec4 v, vec4 out);
 

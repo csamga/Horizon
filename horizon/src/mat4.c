@@ -164,7 +164,7 @@ void mat4_scaling(vec3 v, mat4 out)
 void mat4_view(vec3 position, vec3 forward, vec3 up, mat4 out)
 {
 	vec3 negative_pos;
-	vec3_negate(position, negative_pos);
+	vec3_negate_to(position, negative_pos);
 
 	mat4 translation;
 	mat4_translation(negative_pos, translation);
